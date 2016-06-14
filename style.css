@@ -1,0 +1,130 @@
+
+header {
+	border-bottom: 1px solid black;
+}
+
+h1 {
+	text-align: center;
+}
+
+#logo {
+	margin: 0px, 0px, 20px, 20px;
+	border: 1px solid black
+	width: 200px;
+	padding: 0px 0px 5px 40px;
+}
+
+#logo img:hover {
+	transform: rotate(180deg);
+	transition-duration: 1s;
+}
+
+body {
+	height: 1000px;
+	width: 1024px;
+	margin: 0px auto;
+	border: 1px solid black;
+	border-radius: 25px;
+
+}
+
+.banner {
+
+}
+
+.wrapper {
+	clear: both;
+	border-top: 1px solid black;
+	margin: 0px 0px 0px 0px;
+	padding-top: 40px;
+	padding-bottom: 10px;
+}
+
+
+
+nav {
+	width: 130px;
+	float: left;
+	padding: 0px 0px 0px 20px;
+}
+
+nav ul {
+	background: blue;
+	padding: 5px;
+	height: 120px;
+
+}
+
+nav ul li {
+	list-style-type: none;
+	background: lightblue;
+	width: 80px;
+	margin: 10px auto;
+	text-align: center;
+}
+
+nav ul li a {
+	display: block;
+	text-decoration: none;
+	color: black;
+}
+
+nav ul li a:hover {
+	background-color: yellow;
+	color: red;
+}
+
+.contentright {
+	width: 850px;
+	float: right;
+	border: 1px solid black;
+	margin-bottom: 30px;
+}
+
+h3 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+.textcontent {
+	padding: 0px 15px;
+}
+
+.contentleft {
+	width: 750px;
+	float: left;
+	border: 1px solid black;
+	margin-bottom: 40px;
+}
+
+.image {
+	margin: 20px;
+	width: 220px;
+	float: right;
+}
+
+footer {
+	clear: both;
+	border: 1px solid black;
+	padding: 5px 0px 0px;
+
+}
+
+.skills ul {
+	text-align: center;
+}
+
+.skills ul li {
+	display: inline-block;
+	margin: 0px 35px;
+}
+
+.skills ul li h2:before {
+	content: "\b7";
+	size: 3px;
+}
+
+#copyright {
+	font-style: italic;
+	margin-left: 5px;
+}
