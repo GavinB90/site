@@ -1,4 +1,52 @@
+/*
+// its better to maintain the class/element names in order
+// matching that with index.html
+*/
+* {
+	/*
+	// Some of the elements like p, ul, h1 to h6, etc have some padding/margin by default
+		Hence we have to disable it in the first place as this may cause the problem in the
+		design layout
+	*/
+	padding: 0;
+	margin: 0;
+	font-family: Arial;
+}
 
+body {
+	/*
+	height: 1000px;
+	// we actually do not give height to the body element as
+	// this can grow any longer. In many cases we tend not to give
+	// height anyway unless it is really necessary to have proper alignment with other div/element
+	*/
+	width: 1024px;
+	/*
+	// As you have given the width 1024 make sure all the left and right content needs to add up to
+		this value
+		eg: .contentLeft {width: 324px;} .contentRight {width: 700px;}
+	// Question: What if there is padding in one of the block like so:
+	 	eg: .contentLeft {width: 324px; padding-left: 20px;} .contentRight {width: 700px;}
+		Here the total width becomes: 324 + 20 + 700 = 1044px (so this may cause the problem)
+		Tips: to avoid that use css property: box-sizing: border-box; which add the padding without
+		changing block size.
+		Or when we give width just make sure not to give padding. ;)
+	*/
+	margin: 0px auto;
+	/*
+	// tips: we can also do margin: 0 auto
+	// we can just use number '0' when the value is 0/zero
+	*/
+	border: 1px solid black;
+	border-radius: 25px;
+}
+
+.clear {
+	clear: both;
+}
+
+
+/* Header: Start */
 header {
 	border-bottom: 1px solid black;
 }
@@ -9,56 +57,71 @@ h1 {
 
 #logo {
 	margin: 0px, 0px, 20px, 20px;
-	border: 1px solid black
+	border: 1px solid black;
 	width: 200px;
 	padding: 0px 0px 5px 40px;
 }
 
-#logo img:hover {
+#logo:hover img {
 	transform: rotate(180deg);
 	transition-duration: 1s;
 }
-
-body {
-	height: 1000px;
-	width: 1024px;
-	margin: 0px auto;
-	border: 1px solid black;
-	border-radius: 25px;
-
-}
+/* Header: End */
 
 .banner {
 
 }
 
-.wrapper {
-	clear: both;
+.wrapper1 {
+	/*
+	// clear: both;
+	// I am changing this into new class name which we will call .clear{}
+	*/
 	border-top: 1px solid black;
-	margin: 0px 0px 0px 0px;
+	/*margin: 0px 0px 0px 0px;*/
+	margin: 0; /* I dont see the use of this line */
+	/*
+	// This is basically means: 0px(top) 0px(right) 0px(bottom) 0px(left)
+	// Tips: so we can write: margin: 0; When no other value is present then it repeats given
+		value in above order
+	*/
 	padding-top: 40px;
 	padding-bottom: 10px;
+}
+
+.wrapper1 .contentLeft {
+	float: left;
+	width: 30%;
+}
+
+.wrapper .contentRight {
+	float: right;
+	width: 70%;
 }
 
 
 
 nav {
-	width: 130px;
-	float: left;
+	width: 100%;
+	/*float: left;*/
+	/* this is now moved to contentLeft*/
 	padding: 0px 0px 0px 20px;
+	box-sizing: border-box; /* Try removing this line and you will see nav overlapping */
+	/* We need box-sizing here because we have width and padding defined here.*/
 }
 
 nav ul {
 	background: blue;
+	/* as it is just a colour we can use: background-color: blue*/
 	padding: 5px;
-	height: 120px;
+	height: 120px; /* I would not give height to UL */
 
 }
 
 nav ul li {
 	list-style-type: none;
 	background: lightblue;
-	width: 80px;
+	/*width: 80px;*/
 	margin: 10px auto;
 	text-align: center;
 }
@@ -74,9 +137,7 @@ nav ul li a:hover {
 	color: red;
 }
 
-.contentright {
-	width: 850px;
-	float: right;
+.wrapper1 .textContent {
 	border: 1px solid black;
 	margin-bottom: 30px;
 }
@@ -86,13 +147,15 @@ h3 {
 	text-decoration: underline;
 }
 
-.textcontent {
-	padding: 0px 15px;
-}
+/* PLEASE REPEAT THE ABOVE CODE FOR WRAPPER2 */
 
-.contentleft {
+/*
+// You have got .contentleft defined above already.
+// styling a class in two different places is not a good practise.
+// or may do like: .wrapper1 .contentLeft {} and .wrapper2 .contentRight {}
+*/
+.wrapper2 .contentleft {
 	width: 750px;
-	float: left;
 	border: 1px solid black;
 	margin-bottom: 40px;
 }
