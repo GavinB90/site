@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Gavin Brooker's Portfolio</title>
+
+    <meta charset="utf-8">
+    <meta name="keywords" content="Gavin, Brooker, Portfolio, CV">
+    <meta name="description" content="Gavin Brooker's Portfolio">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+</head>
+<body>
+    <header>
+        <h1>Testing Title</h1>
+        <div id="logo">
+            <img src="#" height="100" width="100">
+        </div>
+    </header>
+    <div class="banner">
+        <img src="#" height="100" width="100%">
+    </div>
+    <div class="image-content-top">
+        <div class="content-left">
+          <nav>
+              <ul>
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="jspage.html">JavaScript</a></li>
+                  <li><a href="#">Link 3</a></li>
+                  <li><a href="#">Link 4</a></li>
+              </ul>
+          </nav>
+        </div>
+        <div class="content-right">
+            <div class="text-content">
+              <h3>Game selection</h3>
+              <p>
+                Select one of the buttons below to select a game. This will display the game below, clicking the same button again will hide the game:
+              </p>
+              <ul id="button-js-games">
+                <li>
+                  <button id="gameOfNumbersButton" type="button">Game of Numbers</button>
+                </li>
+                <li>
+                  <button type="button" onclick="showOrHideDiv(divName)">Second Game</button>
+                </li>
+                <li>
+                  <button type="button" onclick="showOrHideDiv(divName)">Third Game</button>
+                </li>
+              </ul>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
+      <div id="gameSection"> <!-- Hidden until button clicked -->
+        <div id="gameOfNumbers"> <!-- Hidden until button clicked -->
+          <div id="instructions">
+            <p>Instructions <span style="font-weight: normal;">(Hover to see)</span></p>
+          </div>
+          <h2>Game of Numbers!</h2>
+          <p class="instructions-text">
+            Welcome to the game of numbers. The instructions are simple, you select whether you want to manually input your numbers between 1 and 20 or you can choose to have 6 randomized numbers between 1 and 20. The aim of the game is to combine your numbers so that the final number left equals the sum of the other numbers combined. You can use addition, subtraction, division or multiplication to create the final sum. Good luck!
+          </p>
+          <div class="choice"> 
+            <input type="radio" name="numberChoice" value="ownNumbers">Input my own numbers
+            <input type="radio" name="numberChoice" value="randomized">Random numbers!
+          </div>
+          <div class="content-left">
+            <div id="ownNumbers">
+                <ul>
+                  <li>
+                    First Number: <input type="number" id="number1" name="manualInput" min="1" max="20"><p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                  </li>
+                  <li>
+                    Second Number: <input type="number" id="number2" name="manualInput"><p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                  </li>
+                  <li>
+                      Third Number: <input type="number" id="number3" name="manualInput"><p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                  </li>
+                  <li>
+                      Fourth Number: <input type="number" id="number4" name="manualInput"><p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                  </li>
+                  <li>
+                      Fifth Number: <input type="number" id="number5" name="manualInput"><p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                  </li>
+                  <li>
+                    Sixth Number: <input type="number" id="number6" name="manualInput"><p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                  </li>
+                  <li>
+                    <button id="checkNumberInput" type="button">Submit Numbers
+                  </button>
+                  </li>
+                  
+                </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    <div id="copyright">
+      <p>
+        &copy; copyright 2016
+      </p>
+    </div>
+    <script src="./javascript/javascript.js" type="text/javascript">
+    </script>
+</body>
+</html>
