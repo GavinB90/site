@@ -228,14 +228,16 @@ footer h3 {
 #ownNumbers ul {
 	margin-right: 20px;
 	border: 1px solid black;
+	border-bottom-left-radius: 25px;
 	width: 40%;
 }
 
 #ownNumbers ul li {
-	margin: 10px 30% 5px 10%;
+	margin: 10px 20% 5px 0px;
 	list-style-type: none;
 	text-align: right;
 }
+
 
 input[type=number] {
 	width: 50px;
@@ -248,4 +250,19 @@ input[type=number] {
 	font-size: small;
 	color: red;
 	display: none;
+}
+
+.duplicate-number {
+	padding: 0 15px;
+	font-style: italic;
+	font-size: small;
+	text-align: center;
+	color: grey;
+	display: none;
+}
+
+
+
+#clearNumbersBtn, #checkNumberInputBtn {
+	margin: 0 10px;
 }
