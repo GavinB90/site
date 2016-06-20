@@ -60,38 +60,56 @@
           </div>
           <h2>Game of Numbers!</h2>
           <p class="instructions-text">
-            Welcome to the game of numbers. The instructions are simple, you select whether you want to manually input your numbers between 1 and 20 or you can choose to have 6 randomized numbers between 1 and 20. The aim of the game is to combine your numbers so that the final number left equals the sum of the other numbers combined. You can use addition, subtraction, division or multiplication to create the final sum. Good luck!
+              Welcome to the game of numbers. The instructions are simple, you select whether you want to
+              manually input your numbers between 1 and 20 or you can choose to have 6 randomized numbers
+              between 1 and 20, there should be no duplicate numbers. The aim of the game is to combine your numbers
+              so that the final number left equals the sum of the other numbers combined. You can use addition,
+              subtraction, division or multiplication to create the final sum. Good luck!
           </p>
           <div class="choice"> 
-            <input type="radio" name="numberChoice" value="ownNumbers">Input my own numbers
-            <input type="radio" name="numberChoice" value="randomized">Random numbers!
+            <input id="radio-own-numbers" type="radio" name="numberChoice" value="ownNumbers">Input my own numbers
+            <input id="radio-random-numbers" type="radio" name="numberChoice" value="randomized">Random numbers!
           </div>
           <div class="content-left">
             <div id="ownNumbers">
                 <ul>
+                  <li><a>
+                    First Number: <input type="number" id="number1" name="manualInput">
+                    <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                    <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
+                  </a></li>
+                  <li><a>
+                    Second Number: <input type="number" id="number2" name="manualInput">
+                    <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                    <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
+                  </a></li>
+                  <li><a>
+                    Third Number: <input type="number" id="number3" name="manualInput">
+                    <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                    <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
+                  </a></li>
+                  <li><a>
+                    Fourth Number: <input type="number" id="number4" name="manualInput">
+                    <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                    <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
+                  </a></li>
+                  <li><a>
+                    Fifth Number: <input type="number" id="number5" name="manualInput">
+                    <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                    <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
+                  </a></li>
+                  <li><a>
+                    Sixth Number: <input type="number" id="number6" name="manualInput">
+                    <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                    <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
+                  </a></li>
                   <li>
-                    First Number: <input type="number" id="number1" name="manualInput" min="1" max="20"><p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                    <button id="clearNumbersBtn" type="button">Clear Numbers</button>
+                    <button id="checkNumberInputBtn" type="button">Submit Numbers</button>
                   </li>
                   <li>
-                    Second Number: <input type="number" id="number2" name="manualInput"><p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+                    <button id="randomizeNumbersBtn" type="button">Randomize Numbers</button>
                   </li>
-                  <li>
-                      Third Number: <input type="number" id="number3" name="manualInput"><p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
-                  </li>
-                  <li>
-                      Fourth Number: <input type="number" id="number4" name="manualInput"><p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
-                  </li>
-                  <li>
-                      Fifth Number: <input type="number" id="number5" name="manualInput"><p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
-                  </li>
-                  <li>
-                    Sixth Number: <input type="number" id="number6" name="manualInput"><p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
-                  </li>
-                  <li>
-                    <button id="checkNumberInput" type="button">Submit Numbers
-                  </button>
-                  </li>
-                  
                 </ul>
 
             </div>
