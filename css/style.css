@@ -3,195 +3,190 @@
 // matching that with index.html
 */
 * {
-	/*
-	// Some of the elements like p, ul, h1 to h6, etc have some padding/margin by default
-		Hence we have to disable it in the first place as this may cause the problem in the
-		design layout
-	*/
-	padding: 0;
-	margin: 0;
-	font-family: Arial;
+  /*
+  // Some of the elements like p, ul, h1 to h6, etc have some padding/margin by default
+    Hence we have to disable it in the first place as this may cause the problem in the
+    design layout
+  */
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
 }
 
 body {
-	width: 1024px;
-	margin: 0px auto;
-	border: 1px solid black;
-	border-radius: 25px;
+  width: 1024px;
+  margin: 0px auto;
+  border: 1px solid black;
+  border-radius: 25px;
 }
 
 .clear {
-	clear: both;
+  clear: both;
 }
-
 
 /* Header: Start */
 header {
-	border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 h1 {
-	text-align: center;
+  text-align: center;
 }
 
 #logo {
-	margin: 0px 0px 20px 20px;
-	width: 200px;
-	padding: 0px 0px 5px 40px;
+  margin: 0px 0px 20px 20px;
+  width: 200px;
+  padding: 0px 0px 5px 40px;
 }
 
 #logo img:hover {
-	transform: rotate(180deg);
-	transition-duration: 1s;
+  transform: rotate(180deg);
+  transition-duration: 1s;
 }
+
 /* Header: End */
 
 .banner {
 }
 
 .image-content-top {
-	border-top: 1px solid black;
-	padding-top: 40px;
-	padding-bottom: 10px;
+  border-top: 1px solid black;
+  padding-top: 40px;
+  padding-bottom: 10px;
 }
 
 .image-content-top .content-left {
-	float: left;
-	width: 20%;
+  float: left;
+  width: 20%;
 }
 
 .image-content-top .content-right {
-	float: right;
-	width: 65%;
-	margin-right: 20px;
+  float: right;
+  width: 65%;
+  margin-right: 20px;
 }
 
-
-
 nav {
-	width: 100%;
-	padding: 0px 20px;
-	box-sizing: border-box; 
-	margin: 0px 0px 20px 30px;
+  width: 100%;
+  padding: 0px 20px;
+  box-sizing: border-box;
+  margin: 0px 0px 20px 30px;
 }
 
 nav ul {
-	background: blue;
-	padding: 5px 30px;
+  background: blue;
+  padding: 5px 30px;
 }
 
 nav ul li {
-	list-style-type: none;
-	background: lightblue;
-	margin: 10px auto;
-	text-align: center;
+  list-style-type: none;
+  background: lightblue;
+  margin: 10px auto;
+  text-align: center;
 }
 
 nav ul li a {
-	display: block;
-	text-decoration: none;
-	color: black;
+  display: block;
+  text-decoration: none;
+  color: black;
 }
 
 nav ul li a:hover {
-	background-color: yellow;
-	color: red;
+  background-color: yellow;
+  color: red;
 }
 
 h3 {
-	text-align: center;
-	text-decoration: underline;
-	padding: 5px 0px;
+  text-align: center;
+  text-decoration: underline;
+  padding: 5px 0px;
 }
 
 .image-content-top .text-content {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .image-content-top .text-content p {
-	padding: 8px 0px;
+  padding: 8px 0px;
 }
 
 #button-js-games {
-		text-align: center;
+  text-align: center;
 }
 
 #button-js-games li {
-	display: inline-block;
-	padding-left: 10px;
+  display: inline-block;
+  padding-left: 10px;
 }
-
-
 
 /* Bottom half of index.html */
 
-
 .image-content-bottom {
-	border-top: 1px solid black;
-	padding-top: 40px;
-	padding-bottom: 10px;
+  border-top: 1px solid black;
+  padding-top: 40px;
+  padding-bottom: 10px;
 }
 
 .image-content-bottom .content-left {
-	float: left;
-	width: 65%;
-	padding: 10px 20px;
+  float: left;
+  width: 65%;
+  padding: 10px 20px;
 }
 
 .image-content-bottom .content-right {
-	float: right;
-	margin: 20px;
-	width: 20%;
-	border: 1px solid black;
+  float: right;
+  margin: 20px;
+  width: 20%;
+  border: 1px solid black;
 }
 
 footer {
-	clear: both;
-	border-top: 1px solid black;
-	padding: 15px 0px;
+  clear: both;
+  border-top: 1px solid black;
+  padding: 15px 0px;
 }
 
 footer h2 {
-	text-align: center;
-	text-decoration: underline;
-	padding-bottom: 15px;
+  text-align: center;
+  text-decoration: underline;
+  padding-bottom: 15px;
 }
 
 footer h3 {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .skills ul {
-	text-align: center;
+  text-align: center;
 }
 
 .skills ul li {
-	display: inline-block;
-	margin: 0px 35px;
+  display: inline-block;
+  margin: 0px 35px;
 }
 
 .skills ul li h3:before {
-	content: "•";
-	size: 3px;
+  content: "•";
+  size: 3px;
 }
 
 #copyright {
-	font-style: italic;
-	margin: 5px 0px 5px 15px;
-	position: absolute;
+  font-style: italic;
+  margin: 5px 0px 5px 15px;
+  position: absolute;
 
 }
 
 /* jspage.html styling below */
 
 #gameSection {
-	border-top: 1px solid black;
-	min-height: 300px;
-	display: none;
+  border-top: 1px solid black;
+  min-height: 300px;
+  display: none;
 }
 
 #gameOfNumbers {
-	display: none;
+  display: none;
 }
 
 #gameOfNumbers h2 {
@@ -199,11 +194,11 @@ footer h3 {
 }
 
 #gameOfNumbers .content-left {
-	float: left;
-	width: 45%;
-	padding: 10px;
+  float: left;
+  width: 45%;
+  padding: 10px;
   border-top: 1px solid black;
-	border-right: 1px solid black;
+  border-right: 1px solid black;
   border-bottom-left-radius: 25px;
 }
 
@@ -213,82 +208,74 @@ footer h3 {
 }
 
 #gameOfNumbers .content-right {
-	float: right;
-	width: 45%;
-	border: 1px solid black;
+  float: right;
+  width: 45%;
+  border: 1px solid black;
 }
 
 #instructions {
-	font-style: italic;
-	font-weight: bold;
-	margin-top: 5px;
-	padding-left: 10px;
-	width: 200px;
+  font-style: italic;
+  font-weight: bold;
+  margin-top: 5px;
+  padding-left: 10px;
+  width: 200px;
 }
 
 .no-text-dec {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 .instructions-text {
-	display: none;
-	text-align: center;
-	margin: 15px;
+  display: none;
+  text-align: center;
+  margin: 15px;
 }
 
 .choice {
-	text-align: center;
-	margin: 10px;
+  text-align: center;
+  margin: 10px;
 }
 
 .choice input {
-	margin-left: 15px;
-	margin-right: 5px;
+  margin-left: 15px;
+  margin-right: 5px;
 }
 
 #ownNumbers ul {
-	margin-right: 20px;
-<<<<<<< HEAD
-	width: 90%;
-=======
-	border: 1px solid black;
-	border-bottom-left-radius: 25px;
-	width: 40%;
->>>>>>> origin/v1.1
+  margin-right: 20px;
+  width: 90%;
 }
 
 #ownNumbers ul li {
-	margin: 10px 20% 5px 0px;
-	list-style-type: none;
-	text-align: right;
+  margin: 10px 20% 5px 0px;
+  list-style-type: none;
+  text-align: right;
 }
 
-
 input[type=number] {
-	width: 50px;
-	padding: 5px;
-	margin-left: 15px;
-	margin-right: 10%;
+  width: 50px;
+  padding: 5px;
+  margin-left: 15px;
+  margin-right: 10%;
 }
 
 .incorrect-number {
-	font-size: small;
-	color: red;
-	display: none;
+  font-size: small;
+  color: red;
+  display: none;
 }
 
 .duplicate-number {
-	padding: 0 15px;
-	font-style: italic;
-	font-size: small;
-	text-align: center;
-	color: grey;
-	display: none;
+  padding: 0 15px;
+  font-style: italic;
+  font-size: small;
+  text-align: center;
+  color: grey;
+  display: none;
 }
 
-<<<<<<< HEAD
 #clearNumbersBtn, #checkNumberInputBtn {
-	margin: 0 10px;
+  margin: 0 10px;
 }
 
 #numbersFromArray {
@@ -316,7 +303,7 @@ input[type=number] {
 }
 
 #numbersFromArray button {
-	margin: 0 15px;
+  margin: 0 15px;
 }
 
 #mathBtns {
@@ -358,10 +345,3 @@ input[type=number] {
 #gameOutcome {
   display: none;
 }
-=======
-
-
-#clearNumbersBtn, #checkNumberInputBtn {
-	margin: 0 10px;
-}
->>>>>>> origin/v1.1
