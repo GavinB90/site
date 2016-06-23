@@ -2,126 +2,171 @@
 
 <html>
 <head>
-    <title>Gavin Brooker's Portfolio</title>
+  <title>Gavin Brooker's Portfolio</title>
 
-    <meta charset="utf-8">
-    <meta name="keywords" content="Gavin, Brooker, Portfolio, CV">
-    <meta name="description" content="Gavin Brooker's Portfolio">
+  <meta charset="utf-8">
+  <meta name="keywords" content="Gavin, Brooker, Portfolio, CV">
+  <meta name="description" content="Gavin Brooker's Portfolio">
 
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
 
 </head>
 <body>
-    <header>
-        <h1>Testing Title</h1>
-        <div id="logo">
-            <img src="#" height="100" width="100">
-        </div>
-    </header>
-    <div class="banner">
-        <img src="#" height="100" width="100%">
-    </div>
-    <div class="image-content-top">
-        <div class="content-left">
-          <nav>
-              <ul>
-                  <li><a href="index.html">Home</a></li>
-                  <li><a href="jspage.html">JavaScript</a></li>
-                  <li><a href="#">Link 3</a></li>
-                  <li><a href="#">Link 4</a></li>
-              </ul>
-          </nav>
-        </div>
-        <div class="content-right">
-            <div class="text-content">
-              <h3>Game selection</h3>
-              <p>
-                Select one of the buttons below to select a game. This will display the game below, clicking the same button again will hide the game:
-              </p>
-              <ul id="button-js-games">
-                <li>
-                  <button id="gameOfNumbersButton" type="button">Game of Numbers</button>
-                </li>
-                <li>
-                  <button type="button" onclick="showOrHideDiv(divName)">Second Game</button>
-                </li>
-                <li>
-                  <button type="button" onclick="showOrHideDiv(divName)">Third Game</button>
-                </li>
-              </ul>
-            </div>
-        </div>
-    </div>
-    <div class="clear"></div>
-      <div id="gameSection"> <!-- Hidden until button clicked -->
-        <div id="gameOfNumbers"> <!-- Hidden until button clicked -->
-          <div id="instructions">
-            <p>Instructions <span style="font-weight: normal;">(Hover to see)</span></p>
-          </div>
-          <h2>Game of Numbers!</h2>
-          <p class="instructions-text">
-              Welcome to the game of numbers. The instructions are simple, you select whether you want to
-              manually input your numbers between 1 and 20 or you can choose to have 6 randomized numbers
-              between 1 and 20, there should be no duplicate numbers. The aim of the game is to combine your numbers
-              so that the final number left equals the sum of the other numbers combined. You can use addition,
-              subtraction, division or multiplication to create the final sum. Good luck!
-          </p>
-          <div class="choice"> 
-            <input id="radio-own-numbers" type="radio" name="numberChoice" value="ownNumbers">Input my own numbers
-            <input id="radio-random-numbers" type="radio" name="numberChoice" value="randomized">Random numbers!
-          </div>
-          <div class="content-left">
-            <div id="ownNumbers">
-                <ul>
-                  <li><a>
-                    First Number: <input type="number" id="number1" name="manualInput">
-                    <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
-                    <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
-                  </a></li>
-                  <li><a>
-                    Second Number: <input type="number" id="number2" name="manualInput">
-                    <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
-                    <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
-                  </a></li>
-                  <li><a>
-                    Third Number: <input type="number" id="number3" name="manualInput">
-                    <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
-                    <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
-                  </a></li>
-                  <li><a>
-                    Fourth Number: <input type="number" id="number4" name="manualInput">
-                    <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
-                    <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
-                  </a></li>
-                  <li><a>
-                    Fifth Number: <input type="number" id="number5" name="manualInput">
-                    <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
-                    <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
-                  </a></li>
-                  <li><a>
-                    Sixth Number: <input type="number" id="number6" name="manualInput">
-                    <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
-                    <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
-                  </a></li>
-                  <li>
-                    <button id="clearNumbersBtn" type="button">Clear Numbers</button>
-                    <button id="checkNumberInputBtn" type="button">Submit Numbers</button>
-                  </li>
-                  <li>
-                    <button id="randomizeNumbersBtn" type="button">Randomize Numbers</button>
-                  </li>
-                </ul>
-
-            </div>
-          </div>
-        </div>
-      </div>
-    <div id="copyright">
+<header>
+  <h1>Testing Title</h1>
+  <div id="logo">
+    <img src="#" height="100" width="100">
+  </div>
+</header>
+<div class="banner">
+  <img src="#" height="100" width="100%">
+</div>
+<div class="image-content-top">
+  <div class="content-left">
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jspage.html">JavaScript</a></li>
+        <li><a href="#">Link 3</a></li>
+        <li><a href="#">Link 4</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="content-right">
+    <div class="text-content">
+      <h3>Game selection</h3>
       <p>
-        &copy; copyright 2016
+        Select one of the buttons below to select a game. This will display the game below, clicking the same button
+        again will hide the game:
       </p>
+      <ul id="button-js-games">
+        <li>
+          <button id="gameOfNumbersButton" type="button">Game of Numbers</button>
+        </li>
+        <li>
+          <button type="button" onclick="showOrHideDiv(divName)">Second Game</button>
+        </li>
+        <li>
+          <button type="button" onclick="showOrHideDiv(divName)">Third Game</button>
+        </li>
+      </ul>
     </div>
-    <script src="./javascript/javascript.js" type="text/javascript">
-    </script>
+  </div>
+</div>
+<div class="clear"></div>
+<div id="gameSection"> <!-- Hidden until button clicked -->
+  <div id="gameOfNumbers"> <!-- Hidden until button clicked -->
+    <div id="instructions">
+      <p>Instructions <span style="font-weight: normal;">(Hover to see)</span></p>
+    </div>
+    <h2>Game of Numbers!</h2>
+    <p class="instructions-text">
+      Welcome to the game of numbers. The instructions are simple, you select whether you want to
+      manually input your numbers between 1 and 20 or you can choose to have 6 randomized numbers
+      between 1 and 20, there should be no duplicate numbers. The aim of the game is to combine your numbers
+      so that the final number left equals the sum of the other numbers combined. You can use addition,
+      subtraction, division or multiplication to create the final sum. Good luck!
+    </p>
+    <div class="choice">
+      <input id="radio-own-numbers" type="radio" name="numberChoice" value="ownNumbers">Input my own numbers
+      <input id="radio-random-numbers" type="radio" name="numberChoice" value="randomized">Random numbers!
+    </div>
+    <div class="content-left">
+      <div id="ownNumbers">
+        <h2>Numbers to be used:</h2>
+        <ul>
+          <li><a>
+            First Number: <input type="number" id="number1">
+            <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+            <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
+          </a></li>
+          <li><a>
+            Second Number: <input type="number" id="number2">
+            <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+            <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
+          </a></li>
+          <li><a>
+            Third Number: <input type="number" id="number3">
+            <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+            <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
+          </a></li>
+          <li><a>
+            Fourth Number: <input type="number" id="number4">
+            <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+            <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
+          </a></li>
+          <li><a>
+            Fifth Number: <input type="number" id="number5">
+            <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+            <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
+          </a></li>
+          <li><a>
+            Sixth Number: <input type="number" id="number6">
+            <p class="incorrect-number">Number needs to be between 1 and 20.</p><br/>
+            <p class="duplicate-number">(This was a duplicate number so we made it unique for you!)</p><br/>
+          </a></li>
+          <li>
+            <button id="clearNumbersBtn" type="button">Clear Numbers</button>
+            <button id="checkNumberInputBtn" type="button">Submit Numbers</button>
+          </li>
+          <li>
+            <button id="randomizeNumbersBtn" type="button">Randomize Numbers</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="content-right">
+      <div id="numbersFromArray">
+        <h2>Combo Numbers:</h2>
+        <table>
+          <tr>
+            <!-- numbers from array are output here clicking on one fills out the text box in comboNumbersInput-->
+            <td><a class="submittedNumberDisplayed"></a></td>
+            <td><a class="submittedNumberDisplayed"></a></td>
+            <td><a class="submittedNumberDisplayed"></a></td>
+            <td><a class="submittedNumberDisplayed"></a></td>
+            <td><a class="submittedNumberDisplayed"></a></td>
+            <td><a class="submittedNumberDisplayed"></a></td>
+          </tr>
+        </table>
+        <div>
+          <button class="btn-select-number" type="button">Select</button>
+          <button class="btn-select-number" type="button">Select</button>
+          <button class="btn-select-number" type="button">Select</button>
+          <button class="btn-select-number" type="button">Select</button>
+          <button class="btn-select-number" type="button">Select</button>
+          <button class="btn-select-number" type="button">Select</button>
+        </div>
+          <!-- Sum of selected numbers from numbersFromArray and math sign from mathBtns -->
+        <p>Sum = <a id="sumOutput"></a></p>
+      </div>
+      <div id="mathBtns">
+        <!-- Buttons for additon, subtraction, multiplication and division added here -->
+        <button id="addNumber" type="button">+</button>
+        <button id="subtractNumber" type="button">-</button>
+        <button id="multiplyNumber" type="button">x</button>
+        <button id="divideNumber" type="button">/</button>
+      </div>
+      <div id="comboNumbersInput">
+        <!-- Numbers placed in p tags depending on what is clicked in numbersFromArray -->
+          <p><a id="selectedNumberOne">0</a></p>
+          <p><a id="selectedMathSign">+</a></p>
+          <p><a id="selectedNumberTwo">0</a></p>
+          <p><button id="createSum" type="button">Combo</button></p>
+      </div>
+      <div id="gameOutcome">
+        <h2 id="gameResult">GAME OVER</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
+<div id="copyright">
+  <p>
+    &copy; copyright 2016
+  </p>
+</div>
+<script src="./javascript/javascript.js" type="text/javascript">
+</script>
 </body>
 </html>

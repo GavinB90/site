@@ -35,7 +35,7 @@ h1 {
 }
 
 #logo {
-	margin: 0px, 0px, 20px, 20px;
+	margin: 0px 0px 20px 20px;
 	width: 200px;
 	padding: 0px 0px 5px 40px;
 }
@@ -123,7 +123,7 @@ h3 {
 
 
 
-/* Bottom half of site */
+/* Bottom half of index.html */
 
 
 .image-content-bottom {
@@ -142,6 +142,7 @@ h3 {
 	float: right;
 	margin: 20px;
 	width: 20%;
+	border: 1px solid black;
 }
 
 footer {
@@ -194,7 +195,27 @@ footer h3 {
 }
 
 #gameOfNumbers h2 {
-	text-align: center;
+  text-align: center;
+}
+
+#gameOfNumbers .content-left {
+	float: left;
+	width: 45%;
+	padding: 10px;
+  border-top: 1px solid black;
+	border-right: 1px solid black;
+  border-bottom-left-radius: 25px;
+}
+
+#gameOfNumbers .content-left h2 {
+  text-align: left;
+  margin: 5px 0;
+}
+
+#gameOfNumbers .content-right {
+	float: right;
+	width: 45%;
+	border: 1px solid black;
 }
 
 #instructions {
@@ -227,12 +248,11 @@ footer h3 {
 
 #ownNumbers ul {
 	margin-right: 20px;
-	border: 1px solid black;
-	width: 40%;
+	width: 90%;
 }
 
 #ownNumbers ul li {
-	margin: 10px 30% 5px 10%;
+	margin: 10px 20% 5px 0px;
 	list-style-type: none;
 	text-align: right;
 }
@@ -248,4 +268,85 @@ input[type=number] {
 	font-size: small;
 	color: red;
 	display: none;
+}
+
+.duplicate-number {
+	padding: 0 15px;
+	font-style: italic;
+	font-size: small;
+	text-align: center;
+	color: grey;
+	display: none;
+}
+
+#clearNumbersBtn, #checkNumberInputBtn {
+	margin: 0 10px;
+}
+
+#numbersFromArray {
+  border: 1px solid black;
+}
+
+#numbersFromArray table {
+  width: 100%;
+}
+
+#numbersFromArray table tr td {
+  border: 1px solid black;
+  padding: 3% 5.5%;
+}
+
+#numbersFromArray p {
+  font-size: 20px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+#numbersFromArray p a {
+  border: 1px solid black;
+  padding: 10px 30px;
+}
+
+#numbersFromArray button {
+	margin: 0 15px;
+}
+
+#mathBtns {
+  border: 1px solid black;
+  text-align: center;
+}
+
+#mathBtns button {
+  padding: 5px 20px;
+  margin: 5px auto;
+  border: 1px solid black;
+  font-size: 25px;
+}
+
+#comboNumbersInput {
+  text-align: center;
+  border: 1px solid black;
+}
+
+#comboNumbersInput p {
+  font-size: 20px;
+  display: inline-block;
+  border: 1px solid black;
+  margin-top: 15px;
+  padding: 10px 20px;
+}
+
+#comboNumbersInput p:last-child {
+  border: none;
+  display: block;
+  margin-top: 0px;
+}
+
+#createSum {
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+#gameOutcome {
+  display: none;
 }
