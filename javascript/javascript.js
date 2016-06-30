@@ -2,11 +2,19 @@
 var gameInstructions = 0;
 var numberList = [];
 var numberListCopy = [];
+var usedNumbers = [];
 // Setting var for instructions id for easy access.
 var instructionsDiv = document.getElementById("instructions");
 var hideDiv = true;
 var checkedRadio1 = false;
 var checkedRadio2 = false;
+var selectionOneFilled = false;
+var gameComplete = false;
+var gameStarted = false;
+var indexSelected;
+var indexSelected2;
+var sumExists = false;
+var sum;
 
 var className = document.getElementById("gameSection").getElementsByClassName(
   "instructions-text")[gameInstructions];
@@ -36,47 +44,108 @@ document.getElementById("radio-own-numbers").addEventListener("click", function 
     document.getElementById("randomizeNumbersBtn").style.display = "none";
     document.getElementById("clearNumbersBtn").style.display = "inline-block";
     document.getElementById("checkNumberInputBtn").style.display = "inline-block";
-    gameOfNumbers();
-
   }
   checkedRadio1 = true;
   checkedRadio2 = false;
-
-})
+});
 
 document.getElementById("radio-random-numbers").addEventListener("click", function () {
   // Future: Create a function that hide/shows the extra buttons/divs depending on state.
   if (!checkedRadio2.valueOf()) {
     clearFields();
     randomizeNumbers();
+    gameOfNumbers();
     document.getElementById("randomizeNumbersBtn").style.display = "inline-block";
     document.getElementById("clearNumbersBtn").style.display = "none";
     document.getElementById("checkNumberInputBtn").style.display = "none";
-    gameOfNumbers();
-
   }
-
   checkedRadio1 = false;
   checkedRadio2 = true;
-})
+});
 
 document.getElementById("randomizeNumbersBtn").addEventListener("click", function () {
   randomizeNumbers();
   gameOfNumbers();
-})
+
+});
 
 document.getElementById("checkNumberInputBtn").addEventListener("click", function () {
   checkNumbersAddToArray("ownNumbers", "input", "value");
-  gameOfNumbers();
-})
+  if (inputNotEmptyCheck()) {
+    gameOfNumbers();
+  }
+});
 
 document.getElementById("clearNumbersBtn").addEventListener("click", function () {
   clearFields();
-})
+});
 
 document.getElementById("createSum").addEventListener("click", function () {
+  var operatorSelected = document.getElementById("selectedMathSign").innerHTML;
+  var numberSelectedOne = document.getElementById("selectedNumberOne").innerHTML;
+  var numberSelectedTwo = document.getElementById("selectedNumberTwo").innerHTML;
 
-})
+  if(numberSelectedOne !== "0" && numberSelectedTwo !== "0") {
+    if (operatorSelected === "+") {
+      sum = parseInt(numberSelectedOne) + parseInt(numberSelectedTwo);
+      console.log(numberSelectedOne);
+      console.log(numberSelectedTwo);
+    } else if (operatorSelected === "-") {
+      sum = parseInt(numberSelectedOne) - parseInt(numberSelectedTwo);
+    } else if (operatorSelected === "*") {
+      sum = parseInt(numberSelectedOne) * parseInt(numberSelectedTwo);
+    } else if (operatorSelected === "/") {
+      sum = parseInt(numberSelectedOne) / parseInt(numberSelectedTwo);
+    }
+
+    var btnDisplay1 = getElement("numbersFromArray", "btn-select-number", indexSelected);
+    var btnDisplay2 = getElement("numbersFromArray", "btn-select-number", indexSelected2);
+    if (!sumExists) {
+      numberListCopy.splice(indexSelected, 1);
+      btnDisplay1.style.visibility = "hidden";
+    }
+    numberListCopy.splice(indexSelected2, 1);
+    btnDisplay2.style.visibility = "hidden";
+    sumExists = true;
+    var sumOutput = document.getElementById("sumOutput");
+    sumOutput.innerHTML = sum;
+    document.getElementById("selectedNumberOne").innerHTML = sumOutput.innerHTML;
+    document.getElementById("selectedNumberTwo").innerHTML = "0";
+  }
+  //console.log(numberList);
+  //console.log(numberListCopy);
+  if(numberListCopy.length == 1){
+    if(sum === numberListCopy[0]){
+      //Game Won!
+      alert("You won!");
+    }else{
+      //Game Over!
+      alert("Game over!");
+    }
+  }
+});
+
+/*
+function removeFromDupArray(){
+  // Get the value look for it in dup array, remove.
+}
+ */
+
+document.getElementById("addNumber").addEventListener("click", function () {
+  document.getElementById("selectedMathSign").innerHTML = "+";
+});
+
+document.getElementById("subtractNumber").addEventListener("click", function () {
+  document.getElementById("selectedMathSign").innerHTML = "-";
+});
+
+document.getElementById("multiplyNumber").addEventListener("click", function () {
+  document.getElementById("selectedMathSign").innerHTML = "*";
+});
+
+document.getElementById("divideNumber").addEventListener("click", function () {
+  document.getElementById("selectedMathSign").innerHTML = "/";
+});
 
 var selectNumbers1 = document.getElementById("numbersFromArray").getElementsByClassName("btn-select-number")[0];
 var selectNumbers2 = document.getElementById("numbersFromArray").getElementsByClassName("btn-select-number")[1];
@@ -86,20 +155,63 @@ var selectNumbers5 = document.getElementById("numbersFromArray").getElementsByCl
 var selectNumbers6 = document.getElementById("numbersFromArray").getElementsByClassName("btn-select-number")[5];
 
 selectNumbers1.addEventListener("click", function () {
-  var numberDisplay = getElement("numbersFromArray", "submittedNumberDisplayed", 0);
-  if (numberDisplay.innerHTML !== "") {
-    document.getElementById("selectedNumberOne").innerHTML = numberDisplay.innerHTML;
+  fillSelections(0)
+});
+selectNumbers2.addEventListener("click", function () {
+  fillSelections(1)
+});
+selectNumbers3.addEventListener("click", function () {
+  fillSelections(2)
+});
+selectNumbers4.addEventListener("click", function () {
+  fillSelections(3)
+});
+selectNumbers5.addEventListener("click", function () {
+  fillSelections(4)
+});
+selectNumbers6.addEventListener("click", function () {
+  fillSelections(5)
+});
+
+
+function fillSelections(selectNumberIndex) {
+  var numberDisplay = getElement("numbersFromArray", "submittedNumberDisplayed", selectNumberIndex);
+  var selectedOne = document.getElementById("selectedNumberOne").innerHTML;
+  var selectedTwo = document.getElementById("selectedNumberTwo").innerHTML;
+  var displayInBox = "";
+
+  if (!selectionOneFilled && indexSelected !== selectNumberIndex && indexSelected2 !== selectNumberIndex
+    && !sumExists) {
+    displayInBox = document.getElementById("selectedNumberOne");
+    displayInBox.innerHTML = numberDisplay.innerHTML;
+    indexSelected = selectNumberIndex;
+    selectionOneFilled = true;
+  } else if (indexSelected2 !== selectNumberIndex && indexSelected !== selectNumberIndex) {
+    displayInBox = document.getElementById("selectedNumberTwo");
+    displayInBox.innerHTML = numberDisplay.innerHTML;
+    indexSelected2 = selectNumberIndex;
+    selectionOneFilled = false;
   }
-})
+  numberDisplay.style.color = "grey";
+  for (i = 0; i < numberList.length; i++) {
+    var elementCheck = getElement("numbersFromArray", "submittedNumberDisplayed", i);
+    var checkTextColour = elementCheck.innerHTML;
+    if (displayInBox !== checkTextColour) {
+      elementCheck.style.color = "black";
+    } else {
+      elementCheck.style.color = "grey";
+    }
+  }
+}
 
 // Upon mouse over instructions text is shown.
 instructionsDiv.addEventListener("mouseover", function () {
   className.style.display = "block";
-})
+});
 // When mouse moves off element instructions text returns to hidden.
 instructionsDiv.addEventListener("mouseout", function () {
   className.style.display = "none";
-})
+});
 
 
 // ----------------- Functions --------------------------
@@ -153,11 +265,14 @@ function clearFields() {
     numberList = [];
     var numberDisplay = getElement("numbersFromArray", "submittedNumberDisplayed", i);
     numberDisplay.innerHTML = "";
-    document.getElementById("selectedNumberOne").innerHTML = "0";
-    document.getElementById("selectedNumberTwo").innerHTML = "0";
+    clearSelections();
   }
 }
 
+function clearSelections() {
+  document.getElementById("selectedNumberOne").innerHTML = "0";
+  document.getElementById("selectedNumberTwo").innerHTML = "0";
+}
 
 function checkNumbersAddToArray(divId, tagName, namedItem) {
   numberList = [];
@@ -212,16 +327,27 @@ function setInputMaxMinValues(divId) {
   }
 }
 
-function gameOfNumbers() {
-  var gameComplete = false;
-  numberListCopy = numberList.slice();
-
+function inputNotEmptyCheck() {
   for (i = 0; i < numberList.length; i++) {
-    var numberDisplay = getElement("numbersFromArray", "submittedNumberDisplayed", i);
     var iterateId = "number" + (i + 1);
     var numberInput = document.getElementById(iterateId).value;
-    console.log(numberInput.value);
-    numberDisplay.innerHTML = numberInput;
+    empty = numberInput == "undefined" || numberInput == "";
+    if (empty) {
+      return false;
+    }
   }
+  return true;
+}
 
+function gameOfNumbers() {
+  gameStarted = true;
+  numberListCopy = numberList.slice();
+  if (inputNotEmptyCheck()) {
+    for (i = 0; i < numberList.length; i++) {
+      var numberDisplay = getElement("numbersFromArray", "submittedNumberDisplayed", i);
+      var iterateId = "number" + (i + 1);
+      var numberInput = document.getElementById(iterateId).value;
+      numberDisplay.innerHTML = numberInput;
+    }
+  }
 }

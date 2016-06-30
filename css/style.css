@@ -1,13 +1,4 @@
-/*
-// its better to maintain the class/element names in order
-// matching that with index.html
-*/
 * {
-  /*
-  // Some of the elements like p, ul, h1 to h6, etc have some padding/margin by default
-    Hence we have to disable it in the first place as this may cause the problem in the
-    design layout
-  */
   padding: 0;
   margin: 0;
   font-family: Arial;

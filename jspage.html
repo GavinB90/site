@@ -121,12 +121,12 @@
         <table>
           <tr>
             <!-- numbers from array are output here clicking on one fills out the text box in comboNumbersInput-->
-            <td><a class="submittedNumberDisplayed"></a></td>
-            <td><a class="submittedNumberDisplayed"></a></td>
-            <td><a class="submittedNumberDisplayed"></a></td>
-            <td><a class="submittedNumberDisplayed"></a></td>
-            <td><a class="submittedNumberDisplayed"></a></td>
-            <td><a class="submittedNumberDisplayed"></a></td>
+            <td><a class="submittedNumberDisplayed">""</a></td>
+            <td><a class="submittedNumberDisplayed">""</a></td>
+            <td><a class="submittedNumberDisplayed">""</a></td>
+            <td><a class="submittedNumberDisplayed">""</a></td>
+            <td><a class="submittedNumberDisplayed">""</a></td>
+            <td><a class="submittedNumberDisplayed">""</a></td>
           </tr>
         </table>
         <div>
@@ -137,7 +137,7 @@
           <button class="btn-select-number" type="button">Select</button>
           <button class="btn-select-number" type="button">Select</button>
         </div>
-          <!-- Sum of selected numbers from numbersFromArray and math sign from mathBtns -->
+        <!-- Sum of selected numbers from numbersFromArray and math sign from mathBtns -->
         <p>Sum = <a id="sumOutput"></a></p>
       </div>
       <div id="mathBtns">
@@ -149,10 +149,12 @@
       </div>
       <div id="comboNumbersInput">
         <!-- Numbers placed in p tags depending on what is clicked in numbersFromArray -->
-          <p><a id="selectedNumberOne">0</a></p>
-          <p><a id="selectedMathSign">+</a></p>
-          <p><a id="selectedNumberTwo">0</a></p>
-          <p><button id="createSum" type="button">Combo</button></p>
+        <p><a id="selectedNumberOne">0</a></p>
+        <p><a id="selectedMathSign">+</a></p>
+        <p><a id="selectedNumberTwo">0</a></p>
+        <p>
+          <button id="createSum" type="button">Combo</button>
+        </p>
       </div>
       <div id="gameOutcome">
         <h2 id="gameResult">GAME OVER</h2>
